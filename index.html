@@ -3,121 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timeless Remix - Design & Craft</title>
+    <title>The Swiss Remix - GT Walsheim Edition</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- REMOVED Google Fonts -->
+    <!-- ADDED Adobe Fonts for GT Walsheim. This provides multiple weights. -->
+    <link rel="stylesheet" href="https://use.typekit.net/jhs3sih.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
 
-    <!-- The new, subtle "wow" feature: a custom cursor dot -->
-    <div class="custom-cursor"></div>
+    <div class="preloader"><div class="preloader-text">Calibrating...</div></div>
 
-    <header class="site-header">
-        <div class="container">
-            <a href="#" class="logo">Timeless</a>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#">Work</a></li>
-                    <li><a href="#">Studio</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div class="canvas">
+        <header class="site-header">
+            <a href="#" class="logo">Atelier</a>
+            <a href="#" class="menu-toggle">Index</a>
+        </header>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content container" data-animate>
-                <h1>A design studio for brands that are building the future.</h1>
-                <a href="#" class="btn">Get in touch</a>
-            </div>
-        </section>
+        <div class="background-image"></div>
 
-        <section class="marquee">
-            <div class="marquee-content">
-                AVAILABLE FOR NEW PROJECTS   —   AVAILABLE FOR NEW PROJECTS   —   AVAILABLE FOR NEW PROJECTS   —   AVAILABLE FOR NEW PROJECTS   —  
-            </div>
-        </section>
+        <div class="text-group text-1"><h1>Édition</h1></div>
+        <div class="text-group text-2"><h1>Limitée</h1></div>
+        <div class="text-group text-3"><p>A curated collection of moments, captured in time. Each piece tells a story, a fleeting glimpse into a world of design and motion.</p></div>
 
-        <section class="work container">
-            <h2 data-animate>Selected Work</h2>
-            <div class="work-grid">
-                <div class="work-card" data-animate>
-                    <a href="#">
-                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2264&q=80" alt="Abstract render for Project Sphere">
-                        <div class="work-info">
-                            <h3>Project Sphere</h3>
-                            <p>Branding, Web Design</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="work-card" data-animate>
-                    <a href="#">
-                        <img src="https://images.unsplash.com/photo-1617957718647-516858b03a88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Abstract render for Project Nova">
-                        <div class="work-info">
-                            <h3>Project Nova</h3>
-                            <p>Development, UI/UX</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="work-card" data-animate>
-                    <a href="#">
-                        <img src="https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Abstract render for Project Echo">
-                        <div class="work-info">
-                            <h3>Project Echo</h3>
-                            <p>Brand Identity</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="work-card" data-animate>
-                    <a href="#">
-                        <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Abstract render for Project Apex">
-                        <div class="work-info">
-                            <h3>Project Apex</h3>
-                            <p>Full-Stack Development</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-top" data-animate>
-                <h2>Let's start a project together.</h2>
-                <a href="#" class="btn">Get in touch</a>
-            </div>
-            <div class="footer-bottom">
-                <div class="footer-column">
-                    <h4>Timeless Remix</h4>
-                    <p>A design studio for the future.</p>
-                </div>
-                <div class="footer-column">
-                    <h5>Navigation</h5>
-                    <ul>
-                        <li><a href="#">Work</a></li>
-                        <li><a href="#">Studio</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h5>Social</h5>
-                    <ul>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-legal">
-                <p>© 2023 Timeless Remix. The Final Synthesis.</p>
+        <div class="film-strip">
+            <div class="film-strip-inner">
+                <div class="film-image"><img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=600" alt="landscape 1"></div>
+                <div class="film-image"><img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=600" alt="landscape 2"></div>
+                <div class="film-image"><img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=600" alt="landscape 3"></div>
+                <div class="film-image"><img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=600" alt="landscape 4"></div>
+                <div class="film-image"><img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=600" alt="landscape 5"></div>
             </div>
         </div>
-    </footer>
+        
+        <footer class="site-footer">
+            <span>Scroll to explore</span>
+        </footer>
+    </div>
 
-    <script src="script.js"></script>
+    <div class="spacer"></div>
+
 </body>
 </html>
