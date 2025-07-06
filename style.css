@@ -1,15 +1,5 @@
-/*
- * ===================================================================
- * The Final, Corrected style.css
- * ===================================================================
-*/
-
-/* 
- * STEP 1: Define our custom font using the correct path and filename.
- * This is the part that was missing.
-*/
 @font-face {
-    font-family: 'GT Walsheim Custom'; /* We give our font a unique name */
+    font-family: 'GT-Walsheim'; /* We give our font a unique name */
     
     /* This path is now correct based on your screenshots: folder/filename */
     src: url('GT-Walsheim/GT-Walsheim-Bold-Trial.woff2') format('woff2');
