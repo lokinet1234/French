@@ -1,5 +1,3 @@
-// script.js - The brain of the "Timeless Remix"
-
 document.addEventListener('DOMContentLoaded', () => {
 
     /**
