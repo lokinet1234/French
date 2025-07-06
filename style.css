@@ -1,49 +1,112 @@
-/* style.css - The Swiss Remix */
+/*
+ * ===================================================================
+ * The Final, Corrected style.css
+ * ===================================================================
+*/
 
+/* 
+ * STEP 1: Define our custom font using the correct path and filename.
+ * This is the part that was missing.
+*/
+@font-face {
+    font-family: 'GT Walsheim Custom'; /* We give our font a unique name */
+    
+    /* This path is now correct based on your screenshots: folder/filename */
+    src: url('GT-Walsheim/GT-Walsheim-Bold-Trial.woff2') format('woff2');
+    
+    font-weight: 700; /* This is the bold weight */
+    font-style: normal;
+}
+
+/* 
+ * STEP 2: Set up the design system to use the font we just defined.
+*/
 :root {
     --bg-color: #F4F1EC;
     --text-color: #222222;
-    /* The new, unified font system */
-    --font-main: "gt-walsheim", "Helvetica Neue", sans-serif;
+    
+    /* We now use the name 'GT Walsheim Custom' that we created above */
+    --font-main: 'GT Walsheim Custom', sans-serif;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* 
+ * STEP 3: The rest of the page styling.
+*/
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
 
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    font-family: var(--font-main); /* Apply the font everywhere */
+    font-family: var(--font-main); /* This applies the bold font to everything */
     overflow-x: hidden;
 }
 
 .preloader {
-    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    background-color: var(--bg-color); display: flex; justify-content: center;
-    align-items: center; z-index: 1000; transition: opacity 0.5s ease;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background-color: var(--bg-color); 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    z-index: 1000; 
+    transition: opacity 0.5s ease;
 }
-.preloader-text { font-weight: 500; }
 
-.spacer { height: 500vh; }
+.preloader-text { 
+    font-weight: 500; 
+}
+
+.spacer { 
+    height: 500vh; 
+}
 
 .canvas {
-    position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100vh;
     visibility: hidden;
 }
 
 .site-header, .site-footer {
-    position: absolute; width: 100%; padding: 2rem 3rem;
-    display: flex; justify-content: space-between; align-items: center;
-    z-index: 100; font-weight: 500; font-size: 0.9rem;
-    letter-spacing: 0.3px; /* Add air to UI text */
+    position: absolute; 
+    width: 100%; 
+    padding: 2rem 3rem;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    z-index: 100; 
+    font-weight: 500; 
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
 }
+
 .site-header { top: 0; }
 .site-footer { bottom: 0; }
-.logo, .menu-toggle, .site-footer span { text-decoration: none; color: var(--text-color); }
+
+.logo, .menu-toggle, .site-footer span { 
+    text-decoration: none; 
+    color: var(--text-color); 
+}
 
 .background-image {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    background-image: url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=2127&auto=format&fit=crop');
-    background-size: cover; background-position: center; z-index: -1;
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=2127&auto-format&fit=crop');
+    background-size: cover; 
+    background-position: center; 
+    z-index: -1;
 }
 
 .text-group {
@@ -54,10 +117,10 @@ body {
 }
 
 .text-group h1 {
-    font-family: var(--font-main); /* Ensure it's applied */
+    font-family: var(--font-main);
     font-size: clamp(5rem, 22vw, 18rem);
-    font-weight: 700; /* Use the bold weight for headings */
-    line-height: 1; /* Adjust line-height for the new font */
+    font-weight: 700; /* Use the bold weight we defined */
+    line-height: 1;
     overflow: hidden;
 }
 
@@ -68,7 +131,7 @@ body {
 
 .text-group p {
     font-size: 1rem;
-    font-weight: 400; /* Use the regular weight for body */
+    font-weight: 400; /* The browser will use the default sans-serif for this */
     max-width: 320px;
     line-height: 1.6;
     position: absolute;
@@ -83,6 +146,21 @@ body {
     width: 100%;
     height: 30vh;
 }
-.film-strip-inner { display: flex; height: 100%; }
-.film-image { flex-shrink: 0; width: 28vw; height: 100%; padding: 0 1vw; }
-.film-image img { width: 100%; height: 100%; object-fit: cover; }
+
+.film-strip-inner { 
+    display: flex; 
+    height: 100%; 
+}
+
+.film-image { 
+    flex-shrink: 0; 
+    width: 28vw; 
+    height: 100%; 
+    padding: 0 1vw; 
+}
+
+.film-image img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
